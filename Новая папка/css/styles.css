@@ -175,11 +175,9 @@ letter-spacing: 0.03em;
       display: block;
 
       
-    /* transition-property: color;
+    transition-property: color;
     transition-duration: 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 
        }
       
@@ -193,13 +191,40 @@ letter-spacing: 0.03em;
     display: flex;
     align-items: center;
 
-    /* transition-property: color;
+    transition-property: color;
     transition-duration: 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+
+/* видалити */
+
+
 
   }  
+
+
+/* додаю нижню рисочку */
+
+
+
+
+.linky::after { 
+  content: '' ;
+display: block ;
+width: 100px ;
+height:10px ;
+
+background-color: #2196f3;
+border-radius: 4px; 
+
+
+
+ }
+
+
+
+
+
 
 
  .linky:hover .linky-icon,
@@ -212,14 +237,9 @@ letter-spacing: 0.03em;
  .linky-icon {
   fill:var(--color-primary-contact-Information-top) ;
   margin-right: 10px;
-
-
-/* transition-property: fill ;
+transition-property: fill ;
 transition-duration: 250ms ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-
-transition:  fill  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 
  }
   /* при наведенні або фокусуванні  на ссилку міняє колір на #2196F3 */
@@ -235,47 +255,7 @@ transition:  fill  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
   
   }
   /* ставимо клас current в ту ссилку на поточну сторінку в якій зараз знаходимося щоб підсвітити ссилку для інформації що ця сторінка зараз відкрита в браузері */
-  /* .site-navigation .link.current { color:var(--color-accent-menu-nav)  ;} */
-  .site-navigation .link.current { color:var(--color-accent-menu-nav)  ;
-  
-      
-      }
-
-      .site-navigation .link.current::after { 
-      
-      
-      
-        content: ""; 
-         
-                display: inline-block ; 
-          position: absolute; 
-          /* bottom: -1% (може бути інше значення у вас);  */
-           /* bottom: 85%;  */
-          left: 0;
-           width: 100%; 
-           
-           height: 4px; 
-           background: #2196F3;
-            border-radius: 2px; 
-          
-          }
-
-
-/* синя лінія */
-
-/* .site-navigation .link.current::after {
-   content: "";
-    display: inline-block; 
-    position: absolute; 
-    bottom: 1px; 
-    left: 0;
-     width: 100%; 
-     height: 4px; 
-     background: #2196F3; 
-     border-radius: 2px;
-      } */
-
-
+  .site-navigation .link.current { color:var(--color-accent-menu-nav)  ;}
 
 
   /* Рішення для бізнесу hero     під шапкою перша секція */ 
@@ -315,7 +295,7 @@ margin-right: auto;
 
 .button { 
   color:var(--color-button-text) ;
-  background-color: var(--color-primary-background-button) ; 
+  background-color:var(--color-primary-background-button) ; 
   cursor: pointer;
   font-family: inherit;
   font-style: normal;
@@ -330,13 +310,10 @@ margin-right: auto;
   letter-spacing: 0.06em;
  padding: 10px 32px;
 
-/* 
+
  transition-property: color, background-color ;
- transition-duration: 2250ms;
- transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-
- transition:  color  250ms cubic-bezier(0.4, 0, 0.2, 1),  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+ transition-duration: 250ms;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 
@@ -480,7 +457,7 @@ border-radius: 0px 0px 4px 4px; */
     display: flex;    
     gap: 10px;
 justify-content: center;
-margin-top: 16px;
+padding-top: 16px;
 padding-bottom: 30px;
 
 
@@ -498,14 +475,9 @@ justify-content: center;
     background-color: var(--background-color-our-team-li) ;
     border-radius: 50%;
 
-    /* transition-property: background-color;
-    transition-duration: 4250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)   ;
-
-
-
+    transition-property: background-color;
+    transition-duration: 250ms ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
     }
   
 
@@ -513,15 +485,9 @@ justify-content: center;
       display: block;
       fill: var(--color-primary-icon) ;
 
-      /* transition-property: fill;
-    transition-duration: 2250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-   
-
-    
+      transition-property: fill;
+    transition-duration: 250ms ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
       
      } 
      
@@ -575,8 +541,16 @@ justify-content: center;
 
     }
 
-  
-  
+    .customers-icon {
+      
+      width: 106px;
+      height:60px; 
+      /* padding: 16px 32px;  */
+
+    
+    
+    }
+    .customers-icon {}
 
  .customers { 
     display: flex;
@@ -603,14 +577,10 @@ justify-content: center;
     .customers-link { 
       /* display: block; */
       fill: var(--color-primary-icon);
-/* 
+
       transition-property:  fill;
-      transition-duration: 2250ms ;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-      transition: fill 250ms  cubic-bezier(0.4, 0, 0.2, 1),  border 250ms  cubic-bezier(0.4, 0, 0.2, 1) ;
-
-      
+      transition-duration: 250ms ;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
      } 
      
      .customers-link:hover,
@@ -682,18 +652,10 @@ justify-content: center;
 
   .adresa {color:var(--color-primary-contact-Information-footer) ;
     font-style: normal; 
-/*   
+  
     transition-property:  color;
     transition-duration: 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-    transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1) ;
-
-
-
-
-
-
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
   }
   
   .adresa:hover,
@@ -702,12 +664,9 @@ justify-content: center;
   .adre { color:var(--color-text-map); 
   font-style: normal; 
 
-  /* transition-property:  color;
+  transition-property:  color;
     transition-duration: 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-    transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1) ;
-
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
   .adre:hover,
@@ -745,12 +704,6 @@ justify-content: center;
     height:44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-
-    /* transition-property: background-color;
-      transition-duration: 250ms ;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
     }
   
 
@@ -759,7 +712,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
       fill: var( --color-logo-studio-footer) ;
 
 
-      
+      transition-property:  fill;
+      transition-duration: 250ms ;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
      } 
      
      .join-link:hover,
@@ -797,7 +752,9 @@ top: 0;
 left: 0; 
 
 
-
+/* display: flex;
+align-items: center;
+justify-content: center; */
 
 
 width: 100%;
@@ -805,18 +762,6 @@ height: 100%;
 
 background: rgba(0, 0, 0, 0.2);
 z-index: 1000;
-
-opacity: 1;
-
-
-/* transition-duration: 250ms ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
-transition-property:  opacity ; */
-
-transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-
-
 }
 
 .backdrop.is-hidden {  
@@ -836,38 +781,24 @@ transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 /* центрування  модального віконця */
 /* початок  техніка центрування абсолютно позиційованих елементів */
 position: absolute;
+
 top: 50%;
 left: 50%;
-transform: translate(-50%, -50% ) scale(1) ;
 
-/* transform: translate(-50%, -50% ) ; */
 
+transform: translate(-50%, -50% );
 /* закінчення центрування */
 
 
 
-  width:481px ;
-  height:528px;
+  width:528px ;
+  height: 481px;
+
 
 
 background: #FFFFFF;
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
-
-
-
-/* transition-property:  translate;
-transition-duration: 2250ms ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-
-transition:  translate 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-
-
-
-
-
-
 
 
 
@@ -952,14 +883,9 @@ height: 30px;
     padding: 6px 22px;
 
 
-    /* transition-property:  color, background-color, box-shadow ;
-    transition-duration: 2250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-
-transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color  250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-
-
+    transition-property:  color, background-color, box-shadow ;
+    transition-duration: 250ms ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
   }  
   .filters{ 
     padding-top: 94px; 
@@ -1033,12 +959,9 @@ transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color  250ms c
 
   .box{ display: block; 
   
-    /* transition-property: box-shadow;
+    transition-property: box-shadow;
     transition-duration: 250ms ;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ; */
-
-    transition: box-shadow  250ms cubic-bezier(0.4, 0, 0.2, 1) ;
-
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
   
   }
 
@@ -1052,6 +975,10 @@ transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color  250ms c
 
     
 
+    .backdrop {}
+.backdrop {}
+.backdrop {}
+.backdrop {}
 
 
 .team-thumb { 
@@ -1067,40 +994,27 @@ top: 0;
 left: 0;
 background: rgba(33, 150, 243, 0.9);
 
-
-height: 101%;
+width: 100%;
+height: 100%;
 
 display: flex;
-/* 
-анімція щоб вилізло  */
+/* align-items: center;
+justify-content: center; */
+
+
+/* червона рамочка
+outline:2px solid red ;
+outline-offset: -2px ; */
 
 transform: translateY(100%);
-transition: transform 250ms  cubic-bezier(0.4, 0, 0.2, 1) ;
 
-padding-left: 24px ;
-padding-right: 24px ;
+/* transition: transform ; */
 
-justify-content: center;
-align-items: center;
-
+/* transition-property: box-shadow; */
+transition-duration: 250ms ;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 
 }
-
-
-.overlay p {
-  color: #ffffff; 
-  /* padding: 63px 24px;  */
-  margin: 0;
-
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 28px;
-letter-spacing: 0.03em;
-  
-  }
-
 
 .box:hover .overlay,
 .box:focus .overlay
@@ -1111,3 +1025,9 @@ letter-spacing: 0.03em;
 
 
 
+ .overlay p {
+    color: #000000; 
+    padding: 63px 24px; 
+    margin: 0;
+    
+    }
